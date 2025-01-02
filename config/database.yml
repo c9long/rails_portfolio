@@ -30,7 +30,7 @@ development:
   # To create additional roles in PostgreSQL see `$ createuser --help`.
   # When left blank, PostgreSQL will use the default role. This is
   # the same name as the operating system user running Rails.
-  #username: rails_portfolio
+  # username: rails_portfolio
 
   # The password associated with the PostgreSQL role (username).
   #password:
@@ -81,6 +81,7 @@ test:
 # for a full overview on how database connection configuration can be specified.
 #
 production:
+  url: <%= ENV['DATABASE_URL'] %>
   primary: &primary_production
     <<: *default
     database: rails_portfolio_production
